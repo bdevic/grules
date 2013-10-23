@@ -1,0 +1,37 @@
+
+contribute(enclosingScript()) {
+	method name: "rule",
+	params: [closure: Closure],
+	doc: "Defines a new validation rule"
+}
+
+contribute(enclosingClosure()) {
+	method(name:"name", type:void, params:[value: String], doc: "Unique rule identification name", noParens: true)
+}
+
+contribute(enclosingClosure()) {
+	method(name:"description", type:void, params:[value: String], doc: "Rule description in business terms", noParens: true)
+}
+
+contribute(enclosingClosure()) {
+	method(name:"activeFrom", type:void, params:[value: Date], doc: "Rule activation start date", noParens: true)
+}
+
+contribute(enclosingClosure()) {
+	method(name:"activeTo", type:void, params:[value: Date], doc: "Rule activation end date", noParens: true)
+}
+
+contribute(enclosingClosure()) {
+	method(name:"extend", type:void, params:[value: String], doc: "Name of the base rule which this rule extends", noParens: true)
+}
+
+contribute(enclosingClosure()) {
+	method(name:"when", type:boolean, params:[value: Closure], doc: "LHS condition which must be satisfied for this rule's then clause to execute", noParens: true)
+}
+
+contribute(enclosingClosure()) {
+	method(name:"then", type:Object, params:[value: Closure], doc: "RHS clause which modifies system state", noParens: true)
+}
+
+
+
